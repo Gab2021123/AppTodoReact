@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Oswald:wght@200&display=swap');
+    /*Variables*/
+    $fontPoppins:'Oswald', sans-serif;
+    $inputColorPlaceholder:rgb(160, 124, 124);
+    $activeColor:rgb(34, 28, 28);
+    $fontColor: rgba(121, 129, 108, 0.836);
+    $gradient:linear-gradient(135deg, rgba(230,220,225,1) 1%, rgba(255,255,255,1) 56%);
+    $buttonColor:rgb(226, 209, 145);
+    $buttonColorHover:rgba(241, 223, 155, 0.582);
+    $textColorButton:rgba(146, 118, 16, 0.582);
+
+
+    .container{
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .5rem;
+    background: $gradient;
+    padding: 1rem;
+    //Estilos más Personalizados.s
+    border-radius: 5px;
+    max-width: 700px;
+  border: 4px rgb(233, 186, 186);
+}
+.formTareas{
+    display: flex ;
+    gap: 2rem;
+   
+}
+.inputTarea{
+    width: 350px;
+    height: 25px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:$inputColorPlaceholder;
+    font-family: $fontPoppins;
+    font-size: 17pt;
+    font-weight: 900;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    
+}
+.inputTarea::placeholder{
+     font-size: 15pt;
+     font-weight: bold;
+     color:$inputColorPlaceholder;
+    font-family: $fontPoppins;
+    text-transform: uppercase;
+    
+  
+}
+
+.buttonCreate{
+    border: none;
+    outline: none;  
+    height: 25px;
+    padding: .3rem .4rem;
+    border-radius: 5px;
+    color: $textColorButton;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    transition: background-color 1.2s;
+   
+}
+.button:hover{
+    background-color: $buttonColorHover;
+}
+

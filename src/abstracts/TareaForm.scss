@@ -1,0 +1,117 @@
+$gradient:linear-gradient(0deg, rgb(203, 233, 121) 1%, rgb(230, 179, 179) 56%);
+$gradient-25:linear-gradient(90deg, rgb(203, 233, 121) 1%, rgb(230, 179, 179) 56%);
+$gradient-50:linear-gradient(180deg, rgb(203, 233, 121) 1%, rgb(230, 179, 179) 56%);
+$gradient-100:linear-gradient(360deg, rgb(203, 233, 121) 1%, rgb(230, 179, 179) 56%);
+$buttonColor:rgba(237, 241, 243, 0.219);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.FormTarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    margin: 5px auto;
+    background:$gradient ;
+    width: 500px;
+    height: 70px;
+    background: linear-gradient(51deg, #bcc8d3, #90dd25, #3179dd, #c82c32);
+    background-size: 800% 800%;
+    -webkit-animation: backGround 3s ease infinite;
+    -moz-animation: backGround 3s ease infinite;
+    animation: backGround 3s ease infinite;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    .buttonsAll{
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .buttonContainer{
+        display: flex;
+        overflow: hidden;
+    }
+   .button{
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        color: white;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-size: 7.5pt;
+        font-weight: 700;
+        border: none;
+        outline: none;  
+        height: 50%;
+        background-color:$buttonColor ;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 1.2s;
+   }
+    .button::before{
+        content: "a";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-image:conic-gradient(#6AB7DE  20deg,transparent 120deg);
+        z-index: -2;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        animation: rotar 4s ease infinite;
+    }
+
+    @keyframes rotar{
+        from{
+        transform:rotate(0deg);
+        }
+        to{
+        transform:rotate(-360deg);
+        }
+    }
+    .button::after{
+        content: "";
+        position: absolute;
+        border-radius: 5px;
+        width: 90%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(73, 55, 55);
+        
+        overflow: hidden;
+        z-index: -1;
+       
+    }
+   
+ 
+   
+@-webkit-keyframes backGround {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes backGround {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes backGround {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+}
